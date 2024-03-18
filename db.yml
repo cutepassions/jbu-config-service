@@ -1,0 +1,20 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update # 실행시 DB 초기화 후 DDL 실행
+    properties:
+      hibernate:
+        format_sql: true # SQL 쿼리 보기 좋게 표시
+        show_sql: true # SQL 쿼리 확인
+        hbm2ddl:
+          connection:
+            charSet: UTF-8 # 인코딩 설정
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root # DB 사용자 이름 설정
+    password: 1234 # DB 사용자 암호 설정
+  sql:
+    init:
+      encoding: UTF-8

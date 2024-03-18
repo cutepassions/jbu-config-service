@@ -1,0 +1,126 @@
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials
+        - name: GlobalFilter
+          args:
+            baseMessage: Spring Cloud Gateway Global Filter
+            preLogger: true
+            postLogger: true
+      globalcors:
+        cors-configurations:
+          "[/**]":
+            exposed-headers: "Content-Disposition"
+            allow-credentials: false
+            allowed-origins:
+              - http://localhost:3000
+              - http://k9c101.p.ssafy.io
+              - https://k9c101.p.ssafy.io
+              - http://k9c101.p.ssafy.io:9001
+              - http://k9c101.p.ssafy.io:9002
+              - http://k9c101.p.ssafy.io:9003
+              - http://k9c101.p.ssafy.io:9004
+              - http://k9c101.p.ssafy.io:9005
+              - http://k9c101.p.ssafy.io:9006
+              - http://k9c101.p.ssafy.io:9007
+            allowed-headers:
+              - "*"
+            allowed-methods:
+              - PUT
+              - GET
+              - POST
+              - DELETE
+              - OPTIONS
+
+      routes:
+        # 인증
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/auth/**, /api/oauth2/**
+
+        # 회원 (권한 X)
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/user/search/**
+            - Method=GET
+
+        # 회원 (권한 O)
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/user/**
+          filters:
+            - AuthorizationHeaderFilter
+
+        # 랭크
+        - id: rank-service
+          uri: lb://RANK-SERVICE
+          predicates:
+            - Path=/api/rank/**
+
+        # 메일
+        - id: mail-service
+          uri: lb://MAIL-SERVICE
+          predicates:
+            - Path=/api/mail/**
+
+        # 게임
+        - id: game-service
+          uri: lb://GAME-SERVICE
+          predicates:
+            - Path=/api/game/**
+
+        # 결제
+        - id: payments-service
+          uri: lb://PAYMENTS-SERVICE
+          predicates:
+            - Path=/api/toss/**, /api/crystal-shop/**, /api/purchase/**
+
+        # 공지 (권한 X)
+        - id: notice-service
+          uri: lb://NOTICE-SERVICE
+          predicates:
+            - Path=/api/notice/**
+            - Method=GET, OPTIONS
+
+        # 공지 (권한O)
+        - id: notice-service
+          uri: lb://NOTICE-SERVICE
+          predicates:
+            - Path=/api/notice/**
+            - Method=POST, PUT, DELETE
+          filters:
+            - AuthorizationHeaderFilter
+
+        - id: openapi
+          uri: http://k9c101.p.ssafy.io:${server.port}
+          predicates:
+            - Path=/v3/api-docs/**
+          filters:
+            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+springdoc:
+  swagger-ui:
+    urls[0]:
+      name: 인증 서비스
+      url: http://k9c101.p.ssafy.io:9001/v3/api-docs
+    urls[1]:
+      name: 회원 서비스
+      url: http://k9c101.p.ssafy.io:9002/v3/api-docs
+    urls[2]:
+      name: 랭크 서비스
+      url: http://k9c101.p.ssafy.io:9003/v3/api-docs
+    urls[3]:
+      name: 메일 서비스
+      url: http://k9c101.p.ssafy.io:9004/v3/api-docs
+    urls[4]:
+      name: 게임 서비스
+      url: http://k9c101.p.ssafy.io:9005/v3/api-docs
+    urls[5]:
+      name: 결제 서비스
+      url: http://k9c101.p.ssafy.io:9006/v3/api-docs
+    urls[6]:
+      name: 공지 서비스
+      url: http://k9c101.p.ssafy.io:9007/v3/api-docs

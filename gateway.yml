@@ -1,0 +1,94 @@
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - name: GlobalFilter
+          args:
+            baseMessage: Spring Cloud Gateway Global Filter
+            preLogger: true
+            postLogger: true
+
+      routes:
+        # 인증
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/auth/**
+
+        # 회원
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/user/**
+          filters:
+            - AuthorizationHeaderFilter
+
+        # 랭크
+        - id: rank-service
+          uri: lb://RANK-SERVICE
+          predicates:
+            - Path=/api/rank/**
+
+        # 메일
+        - id: mail-service
+          uri: lb://MAIL-SERVICE
+          predicates:
+            - Path=/api/mail/**
+
+        # 게임
+        - id: game-service
+          uri: lb://GAME-SERVICE
+          predicates:
+            - Path=/api/game/**
+
+        # 결제
+        - id: payments-service
+          uri: lb://PAYMENTS-SERVICE
+          predicates:
+            - Path=/api/toss/**, /api/crystal-shop/**, /api/purchase/**
+
+        # 공지 (권한 X)
+        - id: notice-service
+          uri: lb://NOTICE-SERVICE
+          predicates:
+            - Path=/api/notice/**
+            - Method=GET
+
+        # 공지 (권한O)
+        - id: notice-service
+          uri: lb://NOTICE-SERVICE
+          predicates:
+            - Path=/api/notice/**
+            - Method=POST, PUT, DELETE
+          filters:
+            - AuthorizationHeaderFilter
+
+        - id: openapi
+          uri: http://localhost:${server.port}
+          predicates:
+            - Path=/v3/api-docs/**
+          filters:
+            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+springdoc:
+  swagger-ui:
+    urls[0]:
+      name: 인증 서비스
+      url: http://localhost:9001/v3/api-docs
+    urls[1]:
+      name: 회원 서비스
+      url: http://localhost:9002/v3/api-docs
+    urls[2]:
+      name: 랭크 서비스
+      url: http://localhost:9003/v3/api-docs
+    urls[3]:
+      name: 메일 서비스
+      url: http://localhost:9004/v3/api-docs
+    urls[4]:
+      name: 게임 서비스
+      url: http://localhost:9005/v3/api-docs
+    urls[5]:
+      name: 결제 서비스
+      url: http://localhost:9006/v3/api-docs
+    urls[6]:
+      name: 공지 서비스
+      url: http://localhost:9007/v3/api-docs

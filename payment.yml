@@ -1,0 +1,7 @@
+spring:
+  payment:
+    toss:
+      test_client: "{cipher}AQAUoKQY4nvfruE6eAg1tiFrCIjVT0rxzjCFdsIBvxe1PoLauRS4E0rCLhRz0BIMWesY4JD9WEgf3+Qf/H8JaSaHy7n6xtdaxYYFoHdI7ocE00p4I1Rc5ZiF+5HMI7wIOk/Q4AnEPtKW4aAlfisJvrzyF0yAzIuShUdVAEaBfazeYcC/fz/J3IHLfmvhm2gEhYUGqQIaK+AfznQkJ7tg0V7puORNaFtXYFmjXIs8Sf9jGWv9BGLmBhKfeG9awm8NZVCuBXgJfM/f9QXme91+w+7K+sxmPPB0C97zPvNWSsWWoHbeskU2ibY7fbHtImBXj7X6KTlzIeuMz0Iwa4knbd3Z6Hpv6G/Ed0SY2GiAo9wll3k8sI3SAWcUelleDdpPP+IbAhLe9C/yHd32pFUd9OlixJY+Ddx2VvWkRV/GQqkLgw=="
+      test_secret: "{cipher}AQCAH6eZFqo+NpG/zPv/EkEiKIXqh8y5X26vjiEUjb1XrD5wHxMNpYvndAgLzsR8tHiztLDte/tjxslePYUvQ41XM/1bgkwMpr8ZAkbOPwXUAL44SfsBFoI5wi4AL5kBLocOvI4TW0w9ojoNibKShm+//Lg37CxxqWUHI/fbpT8nUmcVKyL738PaMQWxC4dFBS3Xb4okafu7AQKeY1VgEjCeVJ8Pljl7yVl31tITrWkFZR9O8OHsNMYqwcDWuOCIuAxWZKXJrP6wgn7Ya7GZ/Xa7hi6hW6hChDzAANj1vdmxhU7CIGt4/rUAmRLyQhLzjoICQ//vSNH0FbqeHXeGE1IppCEdFgblX06/nYdDiz72SDyZTyEaS+i6Gl94YNIOT3lAUMWiI+ACZHeH6EZ8l+qWv+KY+BKEpwJq7IIx2iXdQA=="
+      success_url: http://localhost:3000/mypage/toss/success
+      fail_url: http://localhost:3000/mypage/toss/fail

@@ -1,0 +1,20 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update # 실행시 DB 초기화 후 DDL 실행
+    properties:
+      hibernate:
+        format_sql: true # SQL 쿼리 보기 좋게 표시
+        show_sql: true # SQL 쿼리 확인
+        hbm2ddl:
+          connection:
+            charSet: UTF-8 # 인코딩 설정
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "{cipher}AQC6VNdeX60/CSMoLgTh0BlNzbc9ZLgVUesLKOa6neB8UBLd62whKX3BYW8MCtDF/lxzuLphaFKF+N6w3+R5IU7jtagH7VUcJYJE0cnARkhk32boP95ySHyRv/A3LupM9lYg9NyWaf0pHgeNETJuUyC9YG47swMpjcyyZwvax65JPmIF+nwqdDsufoXgGII2sr6HcDEtLALUgpTt3v/o7eX+KvElowGhWA0hNEnVSJz4WIvp+dDYVps1AuL5vubw+SDGYSvbemccZnN/wXUYIZgtsggbOVbUIeOPIiRlxYHGCy/7bNF3vLS+IFeB85b4icAgykfqjqiF159qXZPKOhl70n3pNogN//tGvf1whCY5EldM9g821U3DjZOKvo4N1ng5dkNQ1k5QbuPiRqkjKPW+ybO9d1ZAHZB3jJI8xxYcnJxFDTaEI7G3BLm801SzF8ESw581hq32MMoOxRMmbGYBfJtM/7Q/ov0rl76nrbjvs7/cn3bNoGILCWVgCm2iRivAzt5BICtAuFB5QtToBj2u/XunPkcxIo+tqa9Q/JOvHgfF3Z1ZLnRdiHEQo8xlj1+JLQudE/QJ3/oPjvNE8JPy"
+    username: "{cipher}AQBfoap5hUl4e/Zk8mgj/Cbkoa1Zbk33IlcCrsy7qUVr07uhYP5g/z2Ed9iuNVf2wBKu5rbTeL5Jo1jvgueHPd0ovtaO/OgB3fjzkYNfRVgvZ35Innh7t+Hh+fw7Sytfl9vHFCMELe1RzRXNHFGJ7wrCS20nEU5T5bSUv4yXT6D7SmEzqwRWiy/1dI0CJD7E4+O70sztSm7eTehMaBXLIvsJ+qxRWeEL2/6FBJZcEKFFXXRCFrOJeBuKbJQpbpMDQCOcYG9flZYUGmT6niyI2MO5SxnSnOTmD7JcBrDrBppQzm3vmvlBUZjsUE9ACY9sB7L0Gz2GIT0UIAhicIQiLAtlGpG/5lwb6D+/0mGSt/W9XtfatnhwacMEnuBLbOAEJk4=" # DB 사용자 이름 설정
+    password: "{cipher}AQCueTy9CdBjG6Ma8pJy3y+iBCXMiQAZgR4g5OYeXnFAnEvQhhWcIiuSDpTUxBwqpM9hn8im5/QUU2B74zn7e8ct8LH9EnRQtmDRly8qrj11sAcXN860/JehSmf/r/zNH8Re+Mz6DAOPBPwUfbVwPvrvM1T1g0aydzjC1m8MRXQ534jtUUvgOcmUPY3dDZGLsR1gm1wQ354exOo80bPXRC1aFmSTrW0TZvDSNeLjT9Lv3bRYm4SERa+0e9615np3Lx/iKoLMtbwTYt+LK6ENcv98pQ533D7cfX2g7fnUBsrFvQuHX7eV4e7UG61N/Lj9HGeXlhVafsendVb8sWJuqfCFLtzmMTxxJGIskmaz4+QpsPuP26RTgXD3r14FAWGkZsc=" # DB 사용자 암호 설정
+  sql:
+    init:
+      encoding: UTF-8

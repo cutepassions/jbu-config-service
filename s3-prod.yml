@@ -1,0 +1,12 @@
+cloud:
+  aws:
+    s3:
+      bucket: "{cipher}AQAf97fFn5ZOpS+pe9oGEj+TLM/3gI+XsSY+MEekH/SnH2u/Pprr1psL6xhMwKVLliQsctJU08Pfx2VsC44iZCxsH/TIqYWMClPgchjTlwuZsHj13ggMF8LKILzSRkgN8L5nwCoafnVGy+lgUm9kjGdn32jve+avgAj/Ji/xku/VQhHWAxt5MrCEa35MA6EmV9VRzORyLLTdIt4VTpe/Htn8YbJ8PEWWnY7YyOwZojn0HeFM2OVW4+ObIRW76iYzlbxRyUKxIu+UBdj1if4t4qibfdn90+uxFN3RCkGNw3vaoklqUN6CYekdW1HJxx+lFJJaGvU6ePjT+0mVxDXFLK327/J0YXQKsWEozWB4fzVC77nyyPhFjIKN/KA16qM5Ys0="
+    credentials:
+      secret-key: "{cipher}AQDP2+d3661rMnZyScutAYTJ0mdGpblAtzYEgypKlbAz+zS1RBrrDIU+dJFZWqPn1rhJSqV8+d/eCHV0TTzc6YpuNy36p6ybix7ip81lw10b+noFkxaX06TXaZVp3F3Hwi7eb+1SQE1kOC2eiZlyG8RqKunkSxsWNZAmngRn1BtfGVIVTXNBqf/yUAYBEzbB6KMMMR+GYwk3Ux/GkS82sHa5olLh6VyEJKC1ND/2cpgZFOi/mkhz4g6JvQTujLpnf7dtX9nZ4gy0TkRdhM978WGofWWtwc4yR+WdFkNR45bZY1dXdTo9NjjWTN8fV/XdLXXbrK19b1USV7M6b46K5/CgYkGK9fv5Zta0sbKn7lTdj8wfao+buXwm1S5dZbreb/D5ripMOCD8d9GtcOx/zqkUdp6a8atihjXQgrRxRvaeCg=="
+      access-key: "{cipher}AQCaKs8HAm+Rf9gu5qXWAi88EijnyRo4xwUIjhEbfz2jUeBNKFMN/MGbQ9QRl7u0eUiuWYvcnvGAa68qapBVuPPb9/A7o/cuyV3ncpuHVgqIEFumbJGUvvLIMZ67hs2ImEId+k08LoaC3n2a35kTOcw/rhXe9jSHY9BszECfq8DDcW4jDSeoj6ATGQRlRmRan9WcBHS+X+LdoaqehtA1vPQFunuy3ruvTr9+QjQJaMpvK/g5hT6GXVhBC9gqxhFXetyUd8J0g/L4HY/7WCXX5Sc36qa7KrG7C35JVP0U+WFWf18s9113FblHBFy8W3ciBWVItQ0+ZoFedmHkNCw3T0D9Iwvm1GEd4Yp7xaVcG7rjQGxDtduUqTlM6aUMhXdJ33fBLbVe1ikhQIy1jaDuRSvk"
+    region:
+      static: ap-northeast-2
+      auto: false
+    stack:
+      auto: false

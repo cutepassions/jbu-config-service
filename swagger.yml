@@ -1,0 +1,16 @@
+# springdoc:
+#   api-docs:
+#     path: /api-docs
+#     version: openapi_3_1
+#   enable-spring-security: true
+#   swagger-ui:
+#     path: /api/swagger.html
+#     groups-order: desc
+#     operations-sorter: method
+#     disable-swagger-default-url: false
+#     display-request-duration: false
+#     enabled: true
+#     doc-expansion: none
+#   show-actuator: true
+#   default-consumes-media-type: application/json
+#   default-produces-media-type: application/json

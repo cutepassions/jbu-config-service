@@ -1,0 +1,6 @@
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: "{cipher}AQCaXF1DU9RRZDiXuQhNJSms4bAZJplbxg1o9kiu11Qs8cGE6apngsiH82/KoCvmXT85qemcDq18lwzC6liuUjm/eMkGpLBUq3I3CefIVoKhjBTotL0VOGzpv1LLMC/Zzbx2ZRQmKFnluj7oY7YnfkekXXFFFOiu33Mve17bBoucl3G4A7fdVvyc728ovXNC19uenMD7PS15GwzKGibOf8UOd6FN8VDVPsKF96vd7UwI0IFJPm9hngX+fnDqvcAFaKTZNoBmFAazrap89bQp/0e3xXksNO+OH88BUO04+/8Q6sy4RKopXGnuKKykTPWljHTYXb6yIT1uBZhlvL/3DiCtmIm+662g3VxoSrw/95MsrCleFz3IoA2yvksekrHppJw="

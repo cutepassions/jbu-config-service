@@ -1,0 +1,13 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 465
+    username: "{cipher}AQCL7VEtX9kQMbtlRUWSE23Ez17mfF8TYDTvwGl8rIxxb+CEiFB6uYbduQzFAaa4dZ/iyLK0A/qFfmAE+G1U4Lhk3nWzJVjxAiPD8fGiuMCe5RAysk1CLh6ZSqLQFhSGwhtfUlVYuR8OK9xN9Dpj6Q0JI15IAQANF9jz3iaFMfDN/rjIDGVpHoXn8ur9gz+1YZxsMolFHgyYkYX0NajUpVlgB1cMrZALj/0wIrqA602krRoW3zSbRnmc8qHCQ5XDx5mtMXxFUvbTDy5avzvZdWAS0g0nZGwp60UAkMaZsl2jaRdJ8JlZhmupXTbpzcAk0YQgjWnFvt6fYVXgjnpbFW00wbMds2we4AHmPNNNU6iAOrsaQnEYsCSRweewrRry4zn+VNIY6oqduClujxswp4nD"
+    password: "{cipher}AQCYUzYG2R2ZSD83nsOszaaTjj4mEO1DyavmLDJRbG4Eyuu55hoTnMILRBtAFKFVhi9BPfuqbnNb6h3qPuHokETNHUfr+SDCJPwzA3u5gBJPxzJfZXo+ZHIqWEq0Ofiyu9v/hOxrtZeDzxIErDU7LWzsbQHs/c+DOmA/MkJQo6oiBeL+Fe53x+jqKgxmVmTHo928nlTgsMbcz/9/clQI7eigBh/GdxlJlhl+nzggBEZBh08Fea6DqMusitwwHKRPXNBlpZo11OFCdaGqYnTHQ7VnHUnctHkPe++vMS5zWObTVji3vv+O9JFNpXtifoVHEzJwyNLyUzCxdUr0PqZNDAcs4N/hlyBKzP3aFumSQSwOxVNQGpQBHqr9GB6zob+skJ/F/lPuTXuraQlYmKQ7V/k4"
+    properties:
+      mail:
+        smtp:
+          auth: true
+          timeout: 5000
+          starttls:
+            enable: true

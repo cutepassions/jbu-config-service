@@ -1,0 +1,6 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: "{cipher}AQBJp9CcSjdIeHAWH2WovXEsxErWGk+1XuZcnRkWBVKv3xQNcV/1SZ4Mf2WjKtwDqMj+L3i1NKl6bF54pEWvRXRlPDsp89ExkEfnatBSiZvGhHy9q0CpfjXCACPgspXKoOcrHrS9O0OXRp+fVfRR/vvrn0eKTKRG9vBe5NVHmY9Y8ECt6JZZiMZaGZJ2otjBRaCuuHRXIH4BbjD1XPJTHKE2kA2dGWkb+A+5+vRAOq8AVukwGUPDCAnPUBMhVsqyK2Xrn0jjPgIys5pN2/Fb5jjLRI+n1Ew7WPNLNWyNzo2hWwtW2tvjKC84kTQuQEnpPz+6SzC2v5wDtJ1wDiGCTWr3Z2CstsDI/o0SyuGEbfg4d+cZ1bMPWzVEFEiUZXTF5eUnr0UhjFaMvx3gGYdrOQOHgZeVWlOb8O4ebqCZeSoSJg=="
